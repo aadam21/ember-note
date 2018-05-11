@@ -6,7 +6,7 @@ export default Ember.Route.extend({
   },
   actions: {
     addNotebook: function() {
-      let notebook = this.store.createRecord('notebook', {
+      let notebook = this.store.createRecord('notebook', { // Creates notebook in the store
         title: this.controller.get('title'),
         user: this.controllerFor('application').get('user')
       });
